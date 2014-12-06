@@ -1,6 +1,6 @@
 package main
 
-import "github.com/yelinaung/engname"
+import "github.com/yelinaung/eng-name"
 
 func main() {
 	println("Man name : ", engname.GetMenName())
