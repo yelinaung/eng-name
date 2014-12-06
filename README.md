@@ -4,7 +4,13 @@ eng-name
 Ramdom Men/Women name generator. Golang port of [this lib](https://github.com/Zwenexsys/eng_name).
 
 ```bash
+
+Man name : Hughe Craster
+Woman name : Mary Lighten
+
 ```
+
+View the [docs](https://godoc.org/github.com/yelinaung/eng-name). 
 
 Example
 -------
