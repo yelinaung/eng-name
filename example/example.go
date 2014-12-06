@@ -1,8 +1,11 @@
 package main
 
 import "github.com/yelinaung/eng-name"
+import "fmt"
 
 func main() {
-	println("Man name : ", engname.GetMenName())
-	println("Womn name : ", engname.GetWomenName())
+	fmt.Println()
+	fmt.Printf("Man name : %v \n", engname.GetMenName())
+	fmt.Printf("Woman name : %v \n", engname.GetWomenName())
+	fmt.Println()
 }
