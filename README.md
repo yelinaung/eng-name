@@ -6,14 +6,14 @@ Ramdom Men/Women name generator. Golang port of [this lib](https://github.com/Zw
 ```bash
 
 Man name :  HenryeSingleton
-Womn name :  MargerreScott
+Woman name :  MargerreScott
 
 ```
 
 Example
 -------
 
-```golang
+```go
 package main
 
 import "github.com/yelinaung/eng-name"
