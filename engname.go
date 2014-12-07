@@ -8,14 +8,14 @@ import (
 
 var r *rand.Rand = rand.New(rand.NewSource(99))
 
-// Return random men name
+// Return ramdom men name
 func GetMenName() string {
 	GN_MEN := []string{"Adam", "Andrewe", "Andro", "Anthonye", "Anthony", "Anthonie", "Archbould", "Arthure", "Ambrose", "Alexander", "Barthe", "Bartram", "Bryan", "Christofer", "Christopher", "Christofor", "Cuthbert", "Cuthberte", "Charles", "Deane", "Den", "Edwarde", "Edward", "Edmunde", "Edmund", "Euyn", "Francis", "Gabriell", "Gawen", "George", "Georg", "Gerard", "Germayne", "Gilbert", "Gylbert", "Gillian", "Godfrey", "Gyeles", "Harye", "Hector", "Henry", "Henrye", "Helyng", "Hewgh", "Heugh", "Hewghe", "Hughe", "Hewe", "Jamys", "James", "Jaymes", "Jarard", "Jarrard", "Jerrerd", "Jarret", "Jaspar", "John", "Johne", "Johan", "Jhon", "Jasper", "Lancelot", "Lanclott", "Lanslet", "Lanslett", "Lancelote", "Lamwell", "Leonard", "Lanard", "Lewis", "Laurence", "Lawrence", "Lyones", "Lyonell", "Mathew", "Matthew", "Mathewe", "Marke", "Mark", "Martayn", "Martine", "Martyn", "Martyne", "Marmaduke", "Marmeduke", "Michell", "Mychaell", "Mychell", "Myghall", "Mydfurthe", "Nycoles", "Nicholas", "Nycholas", "Odnall", "Oswyne", "Oswold", "Oswolde", "Oswald", "Uswolde", "Patryke", "Percyvall", "Percivell", "Peires", "Peter", "Randell", "Rundall", "Ralph", "Rauffe", "Rawfe", "Raff", "Rauf", "Rawff", "Rauff", "Ralffe", "Raphe", "Ranolde", "Reginolde", "Reignolde", "Robert", "Robarte", "Richard", "Rycherde", "Richerd", "Rychard", "Rycherd", "Richarde", "Robert", "Roberta", "Roger", "Rowland", "Rouland", "Rynyone", "Sampson", "Stevne", "Stephen", "Symond", "Thomas", "Tristram", "Tymothie", "Umfray", "Umphrey", "Umfraie", "Umfraye", "Humphrey", "Walter", "William", "Wyllm"}
 
 	return fmt.Sprintf("%v %v", GN_MEN[r.Intn(len(GN_MEN))], getSName())
 }
 
-// Return random women name
+// Return ramdom women name
 func GetWomenName() string {
 	GN_WOMEN := []string{"Agnesse", "Alice", "Alyce", "Allis", "Allice", "Alles", "Alison", "Alleson", "Allysone", "Auinson", "Anne", "Ann", "An", "Annesse", "Annes", "Annas", "Auesonne", "Barbara", "Barbare", "Barberye", "Beil", "Beyll", "Besse", "Bessie", "Brydgitt", "Cecilie", "Cecill", "Cicell", "Cicilie", "Sissilie", "Sisseley", "Christien", "Christobell", "Cristye", "Dorothy", "Dorothye", "Dorithy", "Dorthe", "Dorathye", "Doritie", "Dyna", "Ellen", "Elynor", "Elyoner", "Elioner", "Ellinor", "Elyner", "Elianer", "Elloner", "Elsabith", "Esabeth", "Elizabeth", "Elisabethe", "Elsabythe", "Elyzabeth", "Elisabeth", "Elsapeth", "Fayth", "Florence", "Fortune", "Forton", "Frances", "Francis", "Grace", "Helen", "Hellenor", "Isabell", "Esabell", "Elsebell", "Essabell", "Esable", "Isbell", "Isabelle", "Yssabell", "Isabella", "Jane", "Jan", "Jayn", "Jhayne", "Jaine", "Jayne", "Jayn", "Jeane", "Jean", "Janet", "Janett", "Jennet", "Jennat", "Genet", "Jenate", "Jenatt", "Johannet", "Jellyan", "Julian", "Joan", "Juliane", "Katheryn", "Katherine", "", "Kathirine", "Katheron", "Catherine", "Kusteris", "Luce", "Mabell", "Margery", "Margerye", "Margerre", "Margerie", "Margaret", "Margat", "Margrate", "Margarett", "Margret", "Margreat", "Marie", "Marye", "Mary", "Marion", "Maryan", "Maryon", "Martha", "Mauglen", "Mawld", "Mawde", "Meriall", "Phillis", "Phillis", "Rebecca", "Rebacca", "Suzane", "Susana", "Thomazin", "Thomasine", "Thomazin", "Ursuly", "Ursula"}
 
@@ -29,6 +29,6 @@ func getSName() string {
 }
 
 func init() {
-	r := rand.New(rand.NewSource(99))
 	r.Seed(time.Now().UTC().UnixNano())
+
 }
