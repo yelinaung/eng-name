@@ -29,5 +29,6 @@ func getSName() string {
 }
 
 func init() {
+	// seed with time
 	r.Seed(time.Now().UTC().UnixNano())
 }
