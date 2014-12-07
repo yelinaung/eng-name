@@ -30,5 +30,4 @@ func getSName() string {
 
 func init() {
 	r.Seed(time.Now().UTC().UnixNano())
-
 }
