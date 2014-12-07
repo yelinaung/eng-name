@@ -1,4 +1,4 @@
-eng-name
+eng-name 
 =========
 
 Ramdom Men/Women name generator. Golang port of [this lib](https://github.com/Zwenexsys/eng_name).
@@ -28,6 +28,10 @@ func main() {
     fmt.Println()
 }
 ```
+
+Status
+------
+[![Build Status](https://travis-ci.org/yelinaung/eng-name.svg?branch=master)](https://travis-ci.org/yelinaung/eng-name)
 
 License
 -------
