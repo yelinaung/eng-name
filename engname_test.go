@@ -5,17 +5,33 @@ import (
 )
 
 func TestAreMenNamesRamdonOrNot(t *testing.T) {
-	firstManName := GetMenName()
-	secondManName := GetMenName()
-	if firstManName == secondManName {
-		t.Error("two ramdom man names cannot be the same")
+	menNames := make([]string, 100)
+
+	for i, _ := range menNames {
+		menNames[i] = GetMenName()
+	}
+
+	for i, name1 := range menNames {
+		for j, name2 := range menNames {
+			if i != j && name1 == name2 {
+				t.Fatalf("not unique: %v : %v and %v :%v", i, j, name1, name2)
+			}
+		}
 	}
 }
 
 func TestAreWomenNamesRamdomOrNot(t *testing.T) {
-	firstWomanName := GetWomenName()
-	secondWomanName := GetWomenName()
-	if firstWomanName == secondWomanName {
-		t.Error("two ramdom woman names cannot be the same")
+	Names := make([]string, 100)
+
+	for i, _ := range Names {
+		Names[i] = GetWomenName()
+	}
+
+	for i, name1 := range Names {
+		for j, name2 := range Names {
+			if i != j && name1 == name2 {
+				t.Fatalf("not unique: %v : %v and %v :%v", i, j, name1, name2)
+			}
+		}
 	}
 }
