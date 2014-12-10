@@ -23,8 +23,10 @@ import "fmt"
 
 func main() {
     fmt.Println()
-    fmt.Printf("Man name : %v \n", engname.GetMenName())
-    fmt.Printf("Woman name : %v \n", engname.GetWomenName())
+    // You have to seed yourself. For example, like this.
+    RandName := New(time.Now().UTC().UnixNano())
+    fmt.Printf("Man name : %v \n", RandName.GetMenName())
+    fmt.Printf("Woman name : %v \n", RandName.GetWomenName())
     fmt.Println()
 }
 ```
