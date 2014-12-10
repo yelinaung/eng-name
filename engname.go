@@ -14,7 +14,6 @@ var (
 type Name interface {
 	GetMenName() string
 	GetWomenName() string
-	GetSName() string
 }
 
 type RandomName struct {
@@ -23,15 +22,15 @@ type RandomName struct {
 
 // Return ramdom men name
 func (r RandomName) GetMenName() string {
-	return fmt.Sprintf("%v %v", GN_MEN[r.r.Intn(len(GN_MEN))], r.GetSName())
+	return fmt.Sprintf("%v %v", GN_MEN[r.r.Intn(len(GN_MEN))], r.getSName())
 }
 
 // Return ramdom women name
 func (r RandomName) GetWomenName() string {
-	return fmt.Sprintf("%v %v", GN_WOMEN[r.r.Intn(len(GN_WOMEN))], r.GetSName())
+	return fmt.Sprintf("%v %v", GN_WOMEN[r.r.Intn(len(GN_WOMEN))], r.getSName())
 }
 
-func (r RandomName) GetSName() string {
+func (r RandomName) getSName() string {
 	return SNAMES[r.r.Intn(len(SNAMES))]
 }
 
