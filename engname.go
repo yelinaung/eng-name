@@ -34,6 +34,7 @@ func (r RandomName) getSName() string {
 	return SNAMES[r.r.Intn(len(SNAMES))]
 }
 
+// Entry point to seed a new random
 func New(seed int64) Name {
 	name := RandomName{rand.New(rand.New(rand.NewSource(99)))}
 	name.r.Seed(seed)
