@@ -2,13 +2,15 @@ package engname
 
 import (
 	"testing"
+	"time"
 )
 
 func TestAreMenNamesRamdonOrNot(t *testing.T) {
-	menNames := make([]string, 100)
+	menNames := make([]string, 300)
 
 	for i, _ := range menNames {
-		menNames[i] = GetMenName()
+		RandName := New(time.Now().UTC().UnixNano())
+		menNames[i] = RandName.GetMenName()
 	}
 
 	for i, name1 := range menNames {
@@ -24,7 +26,8 @@ func TestAreWomenNamesRamdomOrNot(t *testing.T) {
 	Names := make([]string, 100)
 
 	for i, _ := range Names {
-		Names[i] = GetWomenName()
+		RandName := New(time.Now().UTC().UnixNano())
+		Names[i] = RandName.GetWomenName()
 	}
 
 	for i, name1 := range Names {
