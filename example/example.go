@@ -1,11 +1,18 @@
 package main
 
-import "github.com/yelinaung/eng-name"
-import "fmt"
+import (
+	"fmt"
+	"github.com/yelinaung/eng-name"
+	"time"
+)
 
 func main() {
 	fmt.Println()
-	fmt.Printf("Man name : %v \n", engname.GetMenName())
-	fmt.Printf("Woman name : %v \n", engname.GetWomenName())
+	// You have to seed yourself
+	RandName := engname.New(time.Now().UTC().UnixNano())
+	// Generating random men names
+	fmt.Printf("Man name : %v \n", RandName.GetMenName())
+	// Generating random women names
+	fmt.Printf("Woman name : %v \n", RandName.GetWomenName())
 	fmt.Println()
 }
